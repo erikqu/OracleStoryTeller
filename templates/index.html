@@ -1,0 +1,59 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+
+<style>
+*{
+	font-family: Roboto, Garamond;
+}
+
+body{
+	width: 60%;
+	margin-left: 20%;
+	text-align: center; 
+  		
+	
+
+}
+
+h5{
+	font-family: Roboto, Garamond;
+}
+textarea{
+	height: 30%;
+	width: 100%;
+
+}
+
+
+
+</style>
+</head>
+<body>
+<h1> Oracle </h1>
+
+<h4>Demo of the start of the art in AI, hosted on a Tesla P100, on Google Cloud.  Model based on GPT-2 by OpenAI.  Don't be scared, it can only write as good as the best writers and has the "wisdom" of everyone on Reddit. Think of something to ask the Oracle in three to four sentences, but be careful of how you interpret how they finish your sentences.</h4>
+	
+<form action = "{{url_for("index")}} " method = "post"> Enter text:  <textarea type="text" name = "prefix"> </textarea>
+<input type = "submit">
+</form>
+
+{%if yours%}
+<h5> Your portion: </h5>
+<p> {{yours}}</p>
+<br>
+{%endif%}
+
+<h5> Generated from Model: </h5>
+{% if answer %}
+<p> {{answer}} </p>
+{%endif%}
+
+
+
+
+</body>
+
+
+</html>
