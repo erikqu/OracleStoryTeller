@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 #sys.path.insert(0,"./gpt2/src/") 
 from controller import main 
-
+dirtywords = []
 app = Flask(__name__)
 
 @app.route('/')
